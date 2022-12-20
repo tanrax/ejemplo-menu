@@ -1,0 +1,54 @@
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  transition: 1s
+  z-index: 100
+  &--background
+    background: gray
+  &__logo
+    width: 6rem
+  &__open
+    display: none
+  &__close
+    display: none
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .nav
+    &__ul
+      display: flex
+      align-items: center
+      gap: 1rem
+    &__link
+      font-size: 1.2rem
+      color: white
+    &__container-button
+      display: none
+    &__container-links
+      display: flex
+      justify-content: center
+      align-items: center
+    // Efecto underline
+    &__link
+      position: relative
+    &__link::before
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 2px
+      background-color: #3cefff
+      transform-origin: bottom right
+      transform: scaleX(0)
+      transition: transform 0.5s ease
+    &__link:hover::before
+      transform-origin: bottom left
+      transform: scaleX(1)
+    &__nombre-contenedor, &__puesto-contenedor, &__localizacion-contenedor
+      display: none
+

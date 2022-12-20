@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ejemplo Split media</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- CSS -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- JavaScript -->
+        <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data="{ open: false, isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Abrir menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Cerrar menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Inicio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Nosotros</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Productos</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="preguntas.html" class="nav__link">Preguntas</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="landing">
+                <h1 class="landing__titulo">Preguntas</h1>
+            </section>
+            <div class="container">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus animi dicta ducimus, eligendi
+                    enim est et facilis ipsam magnam, minus nam nulla quos ratione unde voluptates. Quam saepe sapiente
+                    tempora.</p>
+                <p>Amet aspernatur est fugit incidunt ipsam itaque iusto, necessitatibus numquam quasi qui quo
+                    reprehenderit sint tempora veniam voluptates! Cumque facere impedit recusandae sed veritatis.
+                    Cupiditate dolor numquam officiis perspiciatis ut.</p>
+                <p>Cum neque nesciunt obcaecati, suscipit veritatis voluptatem voluptatibus? Animi corporis cumque
+                    deleniti doloremque eius ipsum libero modi nisi non, nulla provident quas reprehenderit temporibus?
+                    Id inventore laboriosam nostrum officiis omnis.</p>
+                <p>Adipisci beatae corporis deserunt ducimus eos, et facilis illo incidunt ipsa ipsam iste iusto maiores
+                    minima nesciunt nisi odit officiis optio quae rerum sint suscipit totam unde velit veniam
+                    voluptatum?</p>
+                <p>Ad aliquid architecto assumenda cum dicta doloribus eum, magni molestias officiis perspiciatis, quod
+                    sit. Ducimus, incidunt, voluptatem. Adipisci aliquid autem eligendi, et inventore minus, nam
+                    necessitatibus nostrum, quisquam sapiente tempore!</p>
+                <p>Cum cumque dolorem eaque est incidunt ipsa ipsam optio quis sint. A accusantium atque debitis
+                    delectus distinctio est ex, facilis fuga inventore nam natus obcaecati quos rem sed vero,
+                    voluptate!</p>
+                <p>Aliquam consectetur est eveniet hic nisi quidem repudiandae ut. At et labore pariatur saepe similique
+                    sunt vitae! Dolorem incidunt libero minus qui sed voluptatibus! Aspernatur atque distinctio
+                    explicabo laudantium maxime?</p>
+                <p>Amet architecto consequatur culpa cumque, deserunt dolore eveniet impedit, iure minus odio officiis
+                    pariatur provident, quod repellat sed sequi temporibus ullam voluptatem. Accusamus ad, consectetur
+                    debitis eius eum impedit laboriosam.</p>
+                <p>Accusantium adipisci alias autem consectetur, dolores eligendi fugiat, id illum magni nam nihil nisi
+                    placeat quasi, reiciendis saepe unde voluptatum? Blanditiis, debitis distinctio dolor est illo nam
+                    odio sapiente similique.</p>
+                <p>Ab ad asperiores assumenda blanditiis culpa cum deserunt dicta doloribus earum fuga fugiat, fugit
+                    maxime minus molestiae necessitatibus numquam officiis optio porro provident quod reiciendis rerum
+                    suscipit tempore veritatis voluptatibus?</p>
+                <p>Aliquid amet at aut deserunt distinctio doloribus ducimus enim hic in inventore laboriosam
+                    necessitatibus, nihil non nulla officia praesentium sequi similique sint sit tenetur. Ad at
+                    necessitatibus perspiciatis quia rem.</p>
+                <p>Accusantium amet aperiam commodi consequuntur deleniti dolor ducimus eligendi, eos, ex excepturi
+                    facere impedit laboriosam minima minus nisi nulla porro quia quibusdam ratione recusandae repellat,
+                    sapiente sint temporibus voluptates voluptatibus.</p>
+                <p>Debitis fugiat fugit illo illum ipsam laboriosam maxime mollitia nam obcaecati odit officia placeat,
+                    quaerat quo sint sit tenetur ullam velit voluptatum. Amet autem impedit nisi non, placeat sint
+                    voluptatem!</p>
+                <p>Ad assumenda commodi consequatur culpa cum cupiditate, exercitationem explicabo hic ipsum iste
+                    laboriosam libero natus, neque odio officia, omnis qui recusandae sunt vitae voluptas? Aut
+                    blanditiis error minus quaerat rem?</p>
+                <p>Corporis delectus deleniti ducimus esse et exercitationem facilis illum itaque molestias numquam,
+                    odio perspiciatis quae quibusdam rem rerum suscipit ullam vitae? Alias amet aperiam dolor dolores
+                    eligendi minus possimus suscipit?</p>
+                <p>Ab blanditiis, commodi dolorem ea eos esse, eveniet expedita facere illum maxime minima nam non
+                    perspiciatis quaerat quasi similique, sit totam ullam vero vitae? Dolorum harum labore nisi sed
+                    sunt?</p>
+                <p>Accusamus commodi necessitatibus reprehenderit! A amet blanditiis cupiditate eius hic iusto unde!
+                    Animi, illum, voluptas. Beatae debitis deleniti ducimus, ea eaque error, eum, explicabo iure quas
+                    repellendus tempore vitae voluptatum.</p>
+                <p>A, ab ad adipisci aperiam architecto at atque debitis dolorem doloribus eos et excepturi
+                    exercitationem expedita inventore itaque iusto necessitatibus nobis officia porro quasi quia
+                    recusandae, reiciendis sit suscipit vel.</p>
+                <p>Assumenda autem ea earum facilis fuga impedit libero molestiae nobis unde, vero. Ad, amet beatae
+                    consequatur dignissimos dolore doloremque ducimus esse eum laborum molestiae nesciunt nihil
+                    provident, quos sapiente voluptatem.</p>
+                <p>
+                    <img
+                            class="scroll-efecto"
+                            src="img/carousel/image-rect-1.jpg"
+                            alt="Naturaleza"
+                            x-data="{show: false}"
+                            x-intersect="show = true"
+                            x-intersect:leave="show = false"
+                            :class="show ? 'scroll-efecto--show' : ''"
+                    >
+                </p>
+                <p>Accusamus cum eius eveniet libero, mollitia tempora veritatis. Debitis, fugiat, reprehenderit! A
+                    assumenda consequuntur dignissimos eaque et fugiat inventore iure laudantium magni, maxime minima
+                    nam quam quas qui repellat veniam?</p>
+                <p>Dolore, laborum, quasi? Ad amet beatae commodi dolores expedita incidunt ipsam ipsum labore
+                    laboriosam, laborum officiis qui rerum tenetur vitae voluptatibus. Consectetur distinctio et iure
+                    nesciunt odit quam quas sequi?</p>
+                <p>Aperiam at dolores ducimus eos excepturi labore maxime, nihil officia qui quisquam reprehenderit
+                    rerum saepe ullam veniam, voluptate voluptatibus voluptatum. Consequuntur, debitis expedita nam nemo
+                    nisi nostrum possimus quo tempore.</p>
+                <p>Aliquam, aperiam beatae commodi culpa cum debitis esse et exercitationem id incidunt inventore,
+                    labore laudantium magni molestiae nam odio porro praesentium quaerat recusandae rerum saepe totam
+                    vel veritatis voluptatem voluptatum?</p>
+                <p>Alias, aspernatur commodi culpa cum doloribus eius et inventore, ipsam ipsum labore laborum odit
+                    placeat porro quae quaerat quasi rerum sunt ullam unde, vel. Autem enim facilis maiores neque
+                    soluta.</p>
+                <p>Adipisci debitis dolorum eligendi harum in libero molestiae nobis reprehenderit sunt temporibus, vel
+                    veniam vitae voluptatum! Aut deserunt, earum fugiat in iste odio optio perspiciatis, quidem quos
+                    sint unde vel.</p>
+                <p>Accusamus adipisci aliquid amet aperiam aspernatur corporis cumque deleniti ducimus error, eum facere
+                    harum hic illum iure molestiae mollitia neque officiis pariatur quae quis quisquam recusandae rerum
+                    sit tenetur voluptatibus.</p>
+                <p>Accusantium amet culpa dolore eum eveniet exercitationem in ipsam iure nesciunt provident quae, ut?
+                    Dolor dolore doloremque error esse ex exercitationem hic, numquam officia quaerat quisquam quos
+                    repellendus sed voluptates?</p>
+                <p>Ad aliquam amet deserunt dolor eligendi est harum id illo impedit ipsa iure iusto nam nostrum numquam
+                    odio porro provident quae quibusdam quisquam repellat repellendus rerum sunt suscipit veniam,
+                    veritatis.</p>
+                <p>Atque autem consectetur culpa delectus eius eligendi error, et ex iste laboriosam laborum magni
+                    pariatur possimus quibusdam rem sed sit tenetur ut vitae, voluptate? Commodi excepturi inventore
+                    iste nihil vitae.</p>
+                <p>Dicta dolorum laborum maiores maxime nostrum numquam quibusdam? Adipisci, amet asperiores, distinctio
+                    dolore eaque esse et ex fugit incidunt molestiae natus nobis officiis omnis pariatur quia sed, sunt
+                    tempora totam!</p>
+                <p>Aliquid culpa eius fugiat fugit magnam. Ad aliquam aperiam consectetur, deleniti esse libero sunt?
+                    Adipisci amet autem cupiditate doloribus eos in ipsum non, odio officia officiis omnis rem repellat,
+                    vitae.</p>
+                <p>Consequuntur et similique tempore ut veniam. Consectetur doloremque inventore, maiores rem soluta ut?
+                    Adipisci culpa cumque doloribus in ipsam iste, quas veniam. Commodi dolores enim labore officiis
+                    reiciendis. Expedita, veritatis.</p>
+                <p>Ad asperiores autem, commodi cum delectus deserunt eligendi facilis nobis officia omnis, recusandae
+                    suscipit. Consequuntur culpa dolores eius, fuga, ipsum itaque laborum molestias porro quidem
+                    recusandae reprehenderit tempore vel voluptatem?</p>
+                <p>Amet ex, id illum maiores rerum sapiente. A adipisci at blanditiis consequuntur debitis distinctio
+                    harum id inventore iusto magni neque optio, perferendis quidem ratione sapiente sed sint tempore
+                    vero voluptatibus!</p>
+                <p>Amet animi assumenda autem, culpa dolor, error nesciunt numquam odio perferendis porro rerum sed sit!
+                    Accusamus aspernatur, aut autem consequuntur deserunt dignissimos eligendi excepturi fugit nam
+                    obcaecati officia similique voluptate.</p>
+                <p>Asperiores assumenda dolorem, error fuga fugit iusto libero nobis omnis, optio provident recusandae
+                    rem sint tempore voluptate voluptatem! Adipisci aliquam beatae deleniti ipsa itaque obcaecati
+                    pariatur quae sed ullam unde.</p>
+                <p>Assumenda atque beatae blanditiis commodi consequatur delectus earum eum fuga, minus modi nulla,
+                    perspiciatis possimus, vel? Ab adipisci culpa deserunt eum, in molestias neque nisi non optio ut.
+                    Dolorum, quibusdam.</p>
+                <p>A accusamus aliquam aperiam, aut blanditiis deleniti dolore fugiat laborum magni molestiae nobis
+                    nulla, obcaecati possimus quam vitae voluptate voluptatem? Aspernatur consectetur corporis debitis
+                    iusto libero molestiae quos repudiandae suscipit!</p>
+                <p>Asperiores commodi consectetur dolorem ex fuga fugit harum hic ipsam ipsum, natus, nemo pariatur
+                    placeat repellat sunt, temporibus veniam voluptate! Consequatur incidunt quam qui similique! Ab cum
+                    eius molestiae neque.</p>
+                <p>Aliquam aut consequuntur distinctio dolorem eaque eius exercitationem fugiat hic impedit ipsa neque
+                    quam, quasi qui quia quidem, rem temporibus! Adipisci at cupiditate deserunt doloremque laborum nam
+                    odit totam voluptatem.</p>
+                <p>Aliquam culpa cupiditate et, ex exercitationem illo ipsa molestias necessitatibus non omnis optio
+                    quas quasi quia quibusdam rem repellat reprehenderit saepe sapiente tempora vel. Adipisci ea
+                    excepturi placeat rem veritatis!</p>
+                <p>Adipisci at autem excepturi fuga ipsum iure minima molestias non nulla, obcaecati quam rem veritatis
+                    voluptas! Adipisci esse inventore ipsa iste non obcaecati veniam voluptatibus. Asperiores aspernatur
+                    hic numquam sapiente?</p>
+                <p>Consectetur consequuntur excepturi magni minima, optio porro repellat unde voluptatum? Adipisci,
+                    aliquid blanditiis cumque deleniti dolore fuga incidunt iusto laboriosam magnam minus placeat quasi
+                    recusandae sapiente veniam veritatis voluptas voluptate?</p>
+                <p>Beatae, fuga iste molestiae nostrum reprehenderit sapiente sunt. Aperiam architecto debitis deserunt
+                    et ipsum itaque laborum minus molestiae molestias perferendis possimus praesentium provident quia
+                    quis quisquam, recusandae reprehenderit sequi velit.</p>
+                <p>Accusantium autem cupiditate deserunt dolorem error ipsam maxime, natus nemo, nobis perferendis porro
+                    reprehenderit! Ad animi architecto debitis distinctio dolor, dolores, eius laborum optio placeat
+                    provident quam quis sed veritatis.</p>
+                <p>Adipisci consequuntur cumque dolore dolores dolorum ea eos hic impedit inventore ipsum itaque
+                    laboriosam laudantium mollitia, nesciunt perferendis quisquam, repellendus sint sit, soluta sunt
+                    tempore ullam veniam veritatis voluptates voluptatibus?</p>
+                <p>Corporis dolorum est recusandae reprehenderit? Architecto asperiores, blanditiis cupiditate
+                    distinctio est exercitationem expedita facilis hic impedit ipsa itaque maxime mollitia, nemo omnis
+                    porro praesentium quam quas quisquam quo reiciendis repudiandae.</p>
+                <p>Consectetur culpa deserunt illo maxime officiis similique. Aspernatur culpa cum cupiditate deleniti
+                    ducimus error, expedita facere harum illum ipsum laboriosam natus non nulla quo suscipit ullam
+                    velit. Doloribus eaque, sapiente.</p>
+                <p>Commodi consequatur distinctio ea enim eos nam similique. Ab doloremque itaque nisi. Atque deserunt
+                    ducimus ea, error expedita iste, laudantium libero maiores minus molestias mollitia nihil rerum sed,
+                    tenetur totam!</p>
+                <p>Adipisci autem culpa deleniti dolorem dolores doloribus enim error eveniet ex, excepturi ipsam itaque
+                    laborum maxime modi nam placeat porro, quasi quis rem reprehenderit sed sequi sunt. Accusantium
+                    ducimus, officia!</p>
+            </div>
+        </main>
+        <footer class="footer">
+            <time datetime="2023">2023</time>
+            Idecrea
+        </footer>
+    </body>
+</html>
+

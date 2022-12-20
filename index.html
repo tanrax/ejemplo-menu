@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Ejemplo Split media</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <!-- Swiper carousel -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- Fuentes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+        <!-- CSS -->
+        <link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 600px)">
+        <!-- JavaScript -->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <header
+                class="header"
+                x-data="{ open: false, isTopScroll: true }"
+                @scroll.window="isTopScroll = window.pageYOffset === 0"
+                :class="isTopScroll ? '' : 'header--background'"
+        >
+            <div class="container">
+                <a class="header__logo" href="index.html">
+                    <img src="img/logo.png" alt="Logo" class="header__image">
+                </a>
+                <button class="button header__open" @click="open = true">
+                    <img src="img/menu.png" alt="Abrir menu">
+                </button>
+                <nav class="nav" :class="open ? 'nav--show' : ''">
+                    <div class="nav__nombre-contenedor">
+                        <p class="nav__nombre">Andros Fenollosa</p>
+                    </div>
+                    <div class="nav__puesto-contenedor">
+                        <p class="nav__puesto">Director de tecnologia</p>
+                    </div>
+                    <div class="nav__localizacion-contenedor">
+                        <p class="nav__localizacion">Valencia, Spain</p>
+                    </div>
+                    <div class="nav__container-button">
+                        <button class="button header__close" @click="open = false">
+                            <img src="img/close.png" alt="Cerrar menu">
+                        </button>
+                    </div>
+                    <div class="nav__container-links">
+                        <ul class="nav__ul">
+                            <li class="nav__item">
+                                <a href="index.html" class="nav__link">Inicio</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Nosotros</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Productos</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="preguntas.html" class="nav__link">Preguntas</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#" class="nav__link">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!-- Slider main container -->
+            <section class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="img/carousel/image-rect-1.jpg" alt="Naturaleza">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="img/carousel/image-rect-2.jpg" alt="Naturaleza">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="img/carousel/image-rect-3.jpg" alt="Naturaleza">
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="swiper-img" src="img/carousel/image-rect-4.jpg" alt="Naturaleza">
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </section>
+
+            <section class="contacto">
+                <div class="container">
+                    <h2 class="contacto__titulo">Contacto</h2>
+                    <form
+                            action="https://formspree.io/f/xdovnovj"
+                            method="POST"
+                    >
+                        <label class="contacto__label">
+                            <span class="contacto__texto">Correo:</span>
+                            <input class="contacto__input" type="email" name="email">
+                        </label>
+                        <label class="contacto__label">
+                            <span class="contacto__texto">Mensaje:</span>
+                            <textarea class="contacto__input" name="message"></textarea>
+                        </label>
+                        <button class="button contacto__enviar" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <time datetime="2023">2023</time>
+            Idecrea
+        </footer>
+    </body>
+</html>
+
